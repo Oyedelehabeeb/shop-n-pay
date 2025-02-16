@@ -1,11 +1,12 @@
 import { Category, Product } from "@/sanity.types";
+import ProductGrid from "./ProductGrid";
 
 interface ProductViewProps {
   products: Product[];
   categories: Category[];
 }
 
-function ProductView({ products, categories }: ProductViewProps) {
+function ProductView({ products }: ProductViewProps) {
   return (
     <div className="flex flex-col">
       {/* categories */}
@@ -17,7 +18,7 @@ function ProductView({ products, categories }: ProductViewProps) {
 
       <div className="flex-1">
         <div>
-          {/* <ProductGrid products={products} /> */}
+          <ProductGrid products={products} />
           <hr className="w-1/2 sm:h-3/4" />
         </div>
       </div>
